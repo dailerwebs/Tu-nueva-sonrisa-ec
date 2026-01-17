@@ -1795,6 +1795,4641 @@
         .modal-overlay.active .cart-modal {
             transform: translateY(0);
         }
+
+        /* Calendar Modal */
+        .calendar-modal {
+            background: var(--white);
+            border-radius: 10px;
+            width: 95%;
+            max-width: 1000px;
+            height: 85vh;
+            display: flex;
+            flex-direction: column;
+            transform: scale(0.95);
+            opacity: 0;
+            transition: var(--transition);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.25);
+            border: 1px solid rgba(249, 228, 150, 0.2);
+        }
+
+        .modal-overlay.active .calendar-modal {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        .calendar-modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem;
+            border-bottom: 1px solid #eee;
+            background: linear-gradient(135deg, rgba(128, 90, 40, 0.1) 0%, rgba(198, 166, 72, 0.1) 100%);
+        }
+
+        .calendar-modal-header h3 {
+            margin: 0;
+            color: var(--black);
+        }
+
+        .calendar-modal-close {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--black);
+            transition: var(--transition);
+        }
+
+        .calendar-modal-close:hover {
+            color: var(--primary);
+        }
+
+        .calendar-modal-body {
+            flex: 1;
+            padding: 1.5rem;
+            overflow: auto;
+        }
+
+        .calendar-iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 8px;
+        }
+        
+        .cart-items {
+            padding: 1.5rem;
+            flex: 1;
+            overflow-y: auto;
+        }
+        
+        .cart-item {
+            display: flex;
+            align-items: center;
+            padding: 1rem 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .cart-item-image {
+            width: 80px;
+            height: 80px;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-right: 1rem;
+        }
+        
+        .cart-item-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .cart-item-details {
+            flex: 1;
+        }
+        
+        .cart-item-title {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .cart-item-price {
+            background: var(--gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 700;
+        }
+        
+        .cart-item-quantity {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+        
+        .cart-item-quantity button {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            border: none;
+            background-color: var(--warm-beige);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .cart-item-quantity button:hover {
+            background-color: #C6A648;
+            color: white;
+        }
+        
+        .cart-item-remove {
+            background: none;
+            border: none;
+            color: #999;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .cart-item-remove:hover {
+            color: var(--black);
+        }
+        
+        .cart-empty {
+            text-align: center;
+            padding: 2rem;
+            color: #666;
+        }
+        
+        .cart-total {
+            padding: 1.5rem;
+            border-top: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+        
+        .cart-actions {
+            padding: 0 1.5rem 1.5rem;
+        }
+        
+        .cart-actions .btn {
+            width: 100%;
+            text-align: center;
+        }
+        
+        /* Blog Article Modal */
+        .blog-modal {
+            background: var(--white);
+            border-radius: 10px;
+            max-width: 1200px;
+            width: 95%;
+            max-height: 95vh;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            transform: translateY(20px);
+            transition: var(--transition);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.25);
+            border: 1px solid rgba(249, 228, 150, 0.2);
+        }
+        
+        .modal-overlay.active .blog-modal {
+            transform: translateY(0);
+        }
+        
+        .blog-modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem;
+            border-bottom: 1px solid #eee;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: var(--white);
+        }
+        
+        .blog-modal-title {
+            font-size: 2.2rem;
+            margin: 0;
+        }
+        
+        .blog-modal-body {
+            padding: 2rem;
+        }
+        
+        .blog-modal-image {
+            width: 100%;
+            height: 400px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 2rem;
+        }
+        
+        .blog-modal-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .blog-meta {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .blog-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .blog-content h3 {
+            margin: 2rem 0 1rem;
+            background: var(--gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .blog-content p {
+            margin-bottom: 1.5rem;
+            color: #444;
+        }
+        
+        .blog-content ul, .blog-content ol {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+        
+        .blog-content li {
+            margin-bottom: 0.5rem;
+            color: #444;
+        }
+        
+        .blog-content blockquote {
+            border-left: 4px solid #C6A648;
+            padding-left: 1.5rem;
+            margin: 2rem 0;
+            font-style: italic;
+            color: #666;
+        }
+        
+        .blog-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 2rem;
+        }
+        
+        .blog-tag {
+            background-color: var(--warm-beige);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            color: #666;
+        }
+        
+        /* ============================================= */
+        /* CARRUSEL "GALERÍA DE SONRISAS" */
+        /* ============================================= */
+        .gallery-section {
+            padding: 5rem 0;
+            background-color: var(--warm-beige);
+        }
+
+        .gallery-carousel {
+            width: 100%;
+            height: 350px;
+            padding: 1rem 0;
+        }
+
+        .gallery-carousel .swiper-slide {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+        }
+
+        .gallery-carousel .swiper-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .gallery-carousel .swiper-button-prev,
+        .gallery-carousel .swiper-button-next {
+            background: var(--gold);
+            color: var(--black);
+            padding: 1.5rem;
+            border-radius: 50%;
+            transition: var(--transition);
+            box-shadow: 0 5px 15px rgba(198, 166, 72, 0.4);
+        }
+        .gallery-carousel .swiper-button-prev:hover,
+        .gallery-carousel .swiper-button-next:hover {
+            color: var(--black);
+            background: var(--gold);
+            transform: scale(1.1);
+        }
+        
+        .gallery-carousel .swiper-button-prev::after,
+        .gallery-carousel .swiper-button-next::after {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        /* ============================================= */
+        /* NUEVO MENU DE SERVICIOS */
+        /* ============================================= */
+
+        .menu-experience-container {
+            padding: 3rem 0;
+            background-color: var(--white);
+            display: none;
+        }
+
+        .menu-experience-container.active {
+            display: block;
+        }
+
+        .menu-category-block {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            margin-bottom: 5rem;
+            color: var(--black);
+        }
+
+        .menu-category-block.reverse {
+            flex-direction: row-reverse;
+        }
+
+        .category-image {
+            flex: 1 1 45%;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .category-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: var(--transition);
+        }
+
+        .category-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .category-menu-items {
+            flex: 1 1 55%;
+        }
+
+        .category-menu-items h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            font-weight: 700;
+            background: var(--gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid;
+            border-image: var(--gold) 1;
+            display: inline-block;
+        }
+
+        .menu-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .menu-item h3 {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--black);
+            margin-bottom: 0.5rem;
+        }
+
+        .menu-item .price {
+            font-family: 'Lato', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            background: var(--gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            flex-shrink: 0;
+            margin-left: 1rem;
+        }
+
+        .menu-item p {
+            font-family: 'Lato', sans-serif;
+            font-size: 0.95rem;
+            color: var(--dark-gray);
+            line-height: 1.6;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .about-us-content {
+                flex-direction: column;
+                gap: 3rem;
+            }
+
+            .about-image-wrapper {
+                min-height: 400px;
+                width: 100%;
+                max-width: 450px;
+            }
+
+            .about-main-image {
+                height: 400px;
+            }
+
+            .about-text-wrapper {
+                text-align: center;
+                max-width: 600px;
+            }
+
+            .about-text-wrapper p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .about-checklist {
+                display: inline-block;
+                text-align: left;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .about-buttons {
+                justify-content: center;
+            }
+
+            .hero-container {
+                flex-direction: column;
+                text-align: center;
+                padding-top: 120px;
+                gap: 2rem;
+            }
+            .hero-text-content p {
+                max-width: 600px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .hero-buttons {
+                justify-content: center;
+            }
+            .hero-image-content {
+                height: 350px;
+            }
+            .hero-main-image {
+                width: 400px;
+                height: 360px;
+            }
+            .hero-floating-image-1, .hero-floating-image-2 {
+                width: 100px;
+                height: 100px;
+            }
+            .hero-floating-image-1 { top: 20px; right: 40px; }
+            .hero-floating-image-2 { bottom: 20px; left: 40px; }
+
+            .menu-category-block,
+            .menu-category-block.reverse {
+                flex-direction: column;
+                gap: 2rem;
+            }
+
+            .category-image {
+                max-width: 600px;
+                margin: 0 auto;
+            }
+
+            .category-menu-items h2 {
+                text-align: center;
+                display: block;
+                border-bottom: none;
+            }
+
+            .about-content, .craftsmanship-content {
+                flex-direction: column;
+            }
+            
+            .hero h1 {
+                font-size: 2.8rem; 
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .modal-body {
+                flex-direction: column;
+            }
+            
+            .modal-gallery, .modal-content {
+                width: 100%;
+            }
+            
+            .main-image {
+                height: 300px;
+            }
+            
+            .blog-modal-image {
+                height: 300px;
+            }
+            
+            .product-list-view .product-card {
+                flex-direction: column;
+            }
+            
+            .product-list-view .product-img {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .about-image-wrapper {
+                min-height: 350px;
+            }
+
+            .about-main-image {
+                height: 350px;
+            }
+
+            .about-chef-image {
+                width: 80px;
+                height: 80px;
+                left: -1rem;
+            }
+
+            .about-experience-box {
+                width: 100px;
+                padding: 0.8rem;
+            }
+
+            .about-experience-box strong {
+                font-size: 1.8rem;
+            }
+
+            .about-experience-box span {
+                font-size: 0.8rem;
+            }
+
+            .about-text-wrapper h2 {
+                font-size: 2rem;
+            }
+
+            .about-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn-about-primary, .btn-about-secondary {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .features-divider {
+                margin: 3rem 0;
+            }
+
+            .feature-item {
+                padding: 0.5rem;
+            }
+
+            .hero {
+                height: auto;
+                min-height: 100vh;
+                padding-bottom: 3rem;
+            }
+
+            .hero-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding-top: 120px;
+                gap: 2.5rem;
+            }
+
+            .hero-text-content {
+                display: contents;
+            }
+            
+            .hero-text-content .hero-subtitle {
+                order: 1;
+                text-align: center;
+                font-size: 0.95rem;
+            }
+            
+            .hero .hero-container .hero-text-content h1 {
+                order: 2;
+                text-align: center;
+                font-size: 2.25rem !important;
+                line-height: 1.2;
+            }
+
+            .hero-text-content p {
+                order: 3;
+                text-align: center;
+                max-width: 500px;
+                opacity: 0.9;
+                font-size: 1rem;
+            }
+
+            .hero-image-content {
+                order: 4;
+                height: 300px;
+            }
+            
+            .hero-text-content .hero-buttons { 
+                order: 5;
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+                width: 100%;
+            }
+            
+            .hero-main-image {
+                width: 280px; 
+                height: 250px;
+            }
+            .hero-floating-image-1, .hero-floating-image-2 {
+                width: 80px;
+                height: 80px;
+            }
+            .hero-floating-image-1 { top: 10px; right: 20px; }
+            .hero-floating-image-2 { bottom: 10px; left: 20px; }
+
+            .category-menu-items h2 {
+                font-size: 2.5rem;
+            }
+
+            .menu-item h3 {
+                font-size: 1.25rem;
+            }
+
+            .menu-item .price {
+                font-size: 1.1rem;
+            }
+
+            .logo-text {
+                font-size: 1.8rem;
+            }
+            
+            .logo-img {
+                width: 180px;
+                height: 80px;
+            }
+            
+            .hero h1 {
+                font-size: 3rem;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            nav {
+                position: fixed;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background: linear-gradient(135deg, rgba(128, 90, 40, 0.95) 0%, rgba(198, 166, 72, 0.9) 100%);
+                backdrop-filter: blur(15px);
+                -webkit-backdrop-filter: blur(15px);
+                border-bottom: 1px solid rgba(249, 228, 150, 0.3);
+                box-shadow: 0 5px 20px rgba(128, 90, 40, 0.2);
+                transform: translateY(-100%);
+                opacity: 0;
+                transition: var(--transition);
+                pointer-events: none;
+            }
+            
+            nav.active {
+                transform: translateY(0);
+                opacity: 1;
+                pointer-events: all;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                padding: 2rem;
+            }
+            
+            nav ul li {
+                margin: 0 0 1.5rem 0;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 250px;
+                text-align: center;
+            }
+            
+            .product-actions {
+                flex-direction: column;
+            }
+            
+            .modal-actions {
+                flex-direction: column;
+            }
+            
+            .blog-modal-header {
+                padding: 1.5rem;
+            }
+            
+            .blog-modal-title {
+                font-size: 1.8rem;
+            }
+            
+            .blog-modal-body {
+                padding: 1.5rem;
+            }
+            
+            .page-banner h1 {
+                font-size: 2.2rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .about-image-wrapper {
+                min-height: 300px;
+            }
+            .about-main-image {
+                height: 300px;
+            }
+            .about-chef-image {
+                width: 70px;
+                height: 70px;
+                left: 0;
+                bottom: 1rem;
+            }
+            .about-experience-box {
+                right: 0;
+                top: 1rem;
+            }
+
+            .category-image {
+                max-width: 100%;
+            }
+
+            .category-menu-items h2 {
+                font-size: 2rem;
+            }
+
+            .logo-text {
+                font-size: 1.5rem;
+            }
+            
+            .logo-img {
+                width: 130px;
+                height: auto;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .quiz-footer {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .quiz-footer .btn {
+                width: 100%;
+            }
+            
+            .modal-header {
+                padding: 1rem;
+            }
+            
+            .modal-content {
+                padding: 1.5rem;
+            }
+            
+            .blog-modal-title {
+                font-size: 1.5rem;
+            }
+            
+            .blog-meta {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            .page-banner h1 {
+                font-size: 1.8rem;
+            }
+            
+            .page-banner p {
+                font-size: 1rem;
+            }
+        }
+
+        /* ========================================= */
+        /* AJUSTE LOGO AL COSTADO (SOLO PC) */
+        /* ========================================= */
+        @media (min-width: 1024px) {
+            header .header-container {
+                max-width: 98% !important; /* Ocupa casi todo el ancho de la pantalla */
+                width: 98% !important;
+                padding-left: 2rem; /* Un pequeño espacio desde el borde */
+            }
+            
+            /* Si quieres forzarlo aún más a la izquierda, descomenta la línea de abajo: */
+            /* .logo { margin-left: -20px; } */
+        }
+        /* ===================================================== */
+/* NUEVO ESTILO "NOSOTROS" (ESTRUCTURA PIZZERÍA ADAPTADA) */
+/* ===================================================== */
+
+/* 1. El Banner de Fondo */
+.corporate-banner {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    /* Fondo oscuro relacionado con odontología */
+    background-image: linear-gradient(rgba(26, 26, 26, 0.7), rgba(26, 26, 26, 0.7)),
+                      url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: flex-start;
+    padding-top: 120px; 
+    justify-content: center;
+    text-align: center;
+}
+
+.corporate-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    color: var(--white);
+    font-style: italic;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+}
+ 
+.corporate-title strong {
+    color: var(--gold); /* Dorado del Doctor */
+}
+
+.corporate-divider {
+    width: 80px;
+    height: 4px;
+    background: var(--gold); /* Dorado del Doctor */
+    margin: 0 auto;
+}
+
+/* 2. Tarjeta Flotante */
+.float-card-container {
+    position: relative;
+    margin-top: -180px; /* Sube sobre el banner */
+    z-index: 10;
+    margin-bottom: 5rem;
+    width: 90%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.float-card {
+    background-color: var(--white);
+    display: flex;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+    border-radius: 4px;
+    overflow: hidden;
+    border-top: 5px solid var(--gold); /* Detalle estético */
+}
+
+/* Columna Texto */
+.float-card-content {
+    flex: 1;
+    padding: 4rem;
+    background-color: var(--white);
+}
+
+.top-nav-links {
+    color: var(--gold);
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+.float-heading {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: var(--black);
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    border-left: 5px solid var(--gold); /* Línea Dorada lateral */
+    padding-left: 1.5rem;
+    line-height: 1.1;
+}
+
+.float-card-content p {
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.float-icon {
+    float: left;
+    font-size: 2rem;
+    color: var(--primary); /* Café/Dorado oscuro */
+    margin-right: 1.5rem;
+    margin-top: 5px;
+    background: var(--warm-beige);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+/* Columna Imagen */
+.float-card-image {
+    flex: 1.2;
+    position: relative;
+    min-height: 450px;
+}
+
+.float-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-overlay-text {
+    position: absolute;
+    bottom: 3rem;
+    right: 3rem;
+    text-align: right;
+    color: var(--white);
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+}
+
+.image-overlay-text h3 {
+    font-size: 2rem;
+    font-weight: 300;
+    margin: 0;
+    line-height: 1;
+    font-family: 'Lato', sans-serif;
+}
+ 
+.image-overlay-text h2 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin: 0;
+    line-height: 1;
+    color: var(--gold);
+    font-family: 'Playfair Display', serif;
+}
+
+/* Barra Inferior */
+.bottom-bar {
+    background-color: var(--light-gray);
+    padding: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    border-top: 1px solid #eee;
+}
+ 
+.bottom-bar span {
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #555;
+}
+ 
+.btn-download {
+    background: var(--gold);
+    color: var(--black);
+    padding: 0.8rem 2rem;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+.btn-download:hover {
+    background-color: var(--black);
+    color: var(--white);
+    transform: translateY(-2px);
+}
+
+/* Responsivo */
+@media (max-width: 992px) {
+    .corporate-banner { height: 350px; padding-top: 80px; }
+    .float-card { flex-direction: column; }
+    .float-card-container { margin-top: -100px; }
+    .float-card-image { order: -1; height: 300px; min-height: auto; }
+    .float-card-content { padding: 2rem; }
+    .bottom-bar { flex-direction: column; text-align: center; gap: 1rem; }
+    
+    /* Ocultar imagen en móviles muy pequeños si se desea, como en la pizzería */
+    /* .float-card-image { display: none; } */ 
+}
+
+/* ========================================= */
+/* ESTILOS DEL EQUIPO (TARJETAS CENTRADAS)   */
+/* ========================================= */
+
+.team-timeline-wrapper {
+    padding: 5rem 0;
+    background-color: #f9f9f9; /* Fondo gris muy suave */
+    overflow: hidden;
+}
+
+.timeline-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.timeline-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    color: var(--black);
+    margin-bottom: 0.5rem;
+}
+
+.timeline-header p {
+    color: #666;
+    font-style: italic;
+    font-size: 1.1rem;
+}
+
+/* CONTENEDOR PARA CENTRAR LAS 2 TARJETAS */
+.team-centered-row {
+    display: flex;
+    justify-content: center; /* ESTO LAS PONE EN EL MEDIO */
+    gap: 40px; /* Espacio entre tarjetas */
+    flex-wrap: wrap; /* Para que baje una debajo de otra en celular */
+    padding-bottom: 2rem;
+}
+
+.team-card-wrapper {
+    width: 100%;
+    max-width: 380px; /* Ancho ideal de la tarjeta */
+    flex: 0 0 auto;
+}
+
+/* DISEÑO DE LA TARJETA */
+.team-card {
+    background-color: var(--white);
+    border: 1px solid rgba(198, 166, 72, 0.2); /* Borde dorado sutil */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    overflow: visible; /* Importante para que se vea el círculo flotante */
+    margin-top: 10px;
+}
+
+.team-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(128, 90, 40, 0.15);
+    border-color: var(--gold);
+}
+
+/* FOTO SUPERIOR */
+.team-img-box {
+    position: relative;
+    height: 280px; /* Altura de la foto */
+    width: 100%;
+    overflow: hidden;
+    border-radius: 8px 8px 0 0;
+}
+
+.team-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    transition: transform 0.5s ease;
+}
+
+.team-card:hover .team-img-box img {
+    transform: scale(1.1);
+}
+
+/* CÍRCULO FLOTANTE (ESPECIALIDAD) */
+.team-badge-circle {
+    position: absolute;
+    bottom: -25px;
+    right: 20px;
+    width: 70px;
+    height: 70px;
+    background: var(--primary); /* Color base */
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 4px solid var(--white);
+    z-index: 2;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.team-badge-circle span {
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-top: 2px;
+}
+
+.team-badge-circle i {
+    font-size: 1.2rem;
+    margin-bottom: 2px;
+}
+
+/* TEXTO DE LA TARJETA */
+.team-content-box {
+    padding: 3rem 1.5rem 2rem; /* Relleno extra arriba para el círculo */
+    flex: 1;
+    text-align: left;
+}
+
+.team-content-box h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: var(--black);
+    margin-bottom: 0.5rem;
+}
+
+.team-content-box p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+/* BOTÓN DE LA TARJETA */
+.btn-team-gray {
+    background-color: #f0f0f0;
+    color: var(--black);
+    padding: 0.7rem 1.5rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    transition: 0.3s;
+    letter-spacing: 1px;
+}
+
+.btn-team-gray:hover {
+    background: var(--gold);
+    color: var(--white);
+    border-color: var(--gold);
+}
+
+@media (max-width: 768px) {
+    .team-centered-row {
+        flex-direction: column;
+        align-items: center;
+    }
+    .team-card-wrapper {
+        max-width: 100%;
+    }
+}
+
+/* ========================================= */
+/* ESTILOS DEL EQUIPO CORREGIDOS (Badge fuera) */
+/* ========================================= */
+
+.team-timeline-wrapper {
+    padding: 5rem 0;
+    background-color: #f9f9f9;
+    overflow: visible; /* IMPORTANTE PARA QUE SE VEA EL CIRCULO */
+}
+
+.timeline-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.timeline-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    color: var(--black);
+    margin-bottom: 0.5rem;
+}
+
+/* CONTENEDOR CENTRADO */
+.team-centered-row {
+    display: flex;
+    justify-content: center;
+    gap: 50px; /* Un poco más de espacio */
+    flex-wrap: wrap;
+    padding-bottom: 2rem;
+}
+
+.team-card-wrapper {
+    width: 100%;
+    max-width: 380px;
+    flex: 0 0 auto;
+    /* Asegura espacio inferior para el círculo si se sale mucho */
+    margin-bottom: 30px; 
+}
+
+/* DISEÑO DE LA TARJETA */
+.team-card {
+    position: relative; /* Necesario para posicionar el badge */
+    background-color: var(--white);
+    border: 1px solid rgba(198, 166, 72, 0.2);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    /* CLAVE: Esto permite que el círculo se salga */
+    overflow: visible !important; 
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.team-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(128, 90, 40, 0.15);
+    border-color: var(--gold);
+}
+
+/* FOTO SUPERIOR */
+.team-img-box {
+    position: relative;
+    height: 280px;
+    width: 100%;
+    /* Esto debe estar hidden para el zoom de la foto */
+    overflow: hidden; 
+    border-radius: 8px 8px 0 0;
+}
+
+.team-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    transition: transform 0.5s ease;
+}
+
+.team-card:hover .team-img-box img {
+    transform: scale(1.1);
+}
+
+/* CÍRCULO FLOTANTE (CORREGIDO) */
+.team-badge-circle {
+    position: absolute;
+    /* Posición relativa a toda la tarjeta, no solo la foto */
+    top: 245px; /* Ajustado para quedar justo en la linea */
+    right: 20px;
+    width: 75px; /* Un poco más grande */
+    height: 75px;
+    background: var(--primary);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 4px solid var(--white);
+    z-index: 10; /* Muy por encima */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.team-badge-circle span {
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-top: 3px;
+}
+
+.team-badge-circle i {
+    font-size: 1.3rem;
+}
+
+/* TEXTO DE LA TARJETA */
+.team-content-box {
+    padding: 3.5rem 1.5rem 2rem; /* Más espacio arriba para el círculo */
+    flex: 1;
+    text-align: left;
+}
+
+.team-content-box h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: var(--black);
+    margin-bottom: 0.5rem;
+}
+
+/* BOTÓN */
+.btn-team-gray {
+    background-color: #f4f4f4;
+    color: var(--black);
+    padding: 0.7rem 1.5rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    letter-spacing: 1px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-team-gray:hover {
+    background: var(--gold);
+    color: var(--white);
+}
+
+/* ========================================= */
+/* NUEVA GALERÍA PROFESIONAL                 */
+/* ========================================= */
+.gallery-section {
+    padding: 5rem 0;
+    background-color: var(--white);
+}
+
+.gallery-intro {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 3rem auto;
+}
+.gallery-intro h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: var(--black);
+    margin-bottom: 1rem;
+}
+.gallery-intro p { color: #666; }
+
+/* Grid de la galería */
+.pro-gallery-grid {
+    display: grid;
+    /* 3 columnas en escritorio */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.gallery-item {
+    position: relative;
+    height: 300px;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+/* Efecto Hover */
+.gallery-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(to top, rgba(128, 90, 40, 0.8), rgba(198, 166, 72, 0.4)); /* Degradado dorado */
+    opacity: 0;
+    transition: all 0.4s ease;
+    display: flex;
+    align-items: flex-end;
+    padding: 2rem;
+    pointer-events: none;
+}
+
+.gallery-overlay h4 {
+    color: var(--white);
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    transform: translateY(20px);
+    transition: all 0.4s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+.gallery-item:hover .gallery-overlay {
+    opacity: 0;
+}
+.gallery-item:hover .gallery-overlay h4 {
+    transform: translateY(0);
+}
+
+/* Responsive Galería */
+@media (max-width: 992px) {
+    .pro-gallery-grid { grid-template-columns: repeat(2, 1fr); }
+    .team-centered-row { gap: 30px; }
+}
+@media (max-width: 576px) {
+    .pro-gallery-grid { grid-template-columns: 1fr; }
+}
+
+/* ========================================= */
+/* ESTILOS TIKTOK Y REDES SOCIALES           */
+/* ========================================= */
+
+.tiktok-section {
+    padding: 4rem 0;
+    background-color: var(--white);
+}
+
+/* Ajuste para que el video se vea completo y centrado */
+.tiktok-carousel {
+    width: 100%;
+    padding-bottom: 3rem;
+}
+
+.tiktok-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto; /* Dejar que el video defina la altura */
+}
+
+/* Contenedor de botones sociales abajo */
+.social-follow-container {
+    text-align: center;
+    margin-top: 3rem;
+    padding: 2rem;
+    background-color: var(--light-gray);
+    border-radius: 10px;
+}
+
+.social-follow-container h3 {
+    font-family: 'Playfair Display', serif;
+    color: var(--black);
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+.social-buttons-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.btn-social-follow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Colores específicos de cada red */
+.btn-tiktok {
+    background: #000000; /* Negro TikTok */
+    border: 2px solid #000;
+}
+.btn-tiktok:hover {
+    background: #333;
+    transform: translateY(-3px);
+}
+
+.btn-instagram {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    border: 2px solid transparent;
+}
+.btn-instagram:hover {
+    opacity: 0.9;
+    transform: translateY(-3px);
+}
+
+.btn-facebook {
+    background: #1877F2; /* Azul Facebook */
+    border: 2px solid #1877F2;
+}
+.btn-facebook:hover {
+    background: #166fe5;
+    transform: translateY(-3px);
+}
+
+/* ESTILOS PARA VIDEO NATIVO (LIMPIO SIN RECOMENDADOS) */
+/* ESTILOS MEJORADOS PARA VIDEOS TIKTOK */
+.tiktok-slide {
+    height: auto;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clean-video {
+    width: 100%;
+    max-width: 325px; /* Ancho típico de móvil/TikTok */
+    height: 580px;    /* Altura aproximada de un TikTok */
+    border-radius: 16px;
+    object-fit: cover;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    border: 1px solid #eee;
+    display: block;
+    margin: 0 auto;
+    background: #000; /* Fondo negro mientras carga */
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.clean-video:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+
+/* Mejorar la experiencia de usuario en PC */
+@media (min-width: 1024px) {
+    .clean-video {
+        max-width: 300px;
+        height: 540px;
+    }
+    
+    .tiktok-slide {
+        padding: 15px;
+    }
+}
+
+/* Ajuste para móviles */
+@media (max-width: 767px) {
+    .clean-video {
+        max-width: 100%;
+        height: 500px;
+    }
+}
+
+/* Ajuste para móviles */
+@media (max-width: 576px) {
+    .clean-video {
+        height: 500px;
+    }
+}
+
+/* ESTILOS VIDEO LIMPIO */
+.tiktok-slide {
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.clean-video {
+    width: 100%;
+    max-width: 325px; /* Ancho de celular */
+    height: 580px;    /* Altura vertical */
+    border-radius: 16px;
+    object-fit: cover; /* Que llene el espacio sin estirarse feo */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    border: 1px solid #ddd;
+    background: #000;
+}
+
+/* ========================================= */
+/* 1. ESTILOS TIKTOK (Copia y pega esto en <style>) */
+/* ========================================= */
+
+.tiktok-section {
+    padding: 4rem 0;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.tiktok-carousel {
+    padding-bottom: 3rem;
+    width: 100%;
+}
+
+.tiktok-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+
+/* ESTILO DEL VIDEO (HÍBRIDO) */
+.clean-video {
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    background: #000;
+    border: 1px solid #eee;
+    display: block;
+    object-fit: cover;
+    aspect-ratio: 9/16; /* Mantiene la forma vertical */
+}
+
+/* EN LAPTOP (Se ven 3 videos, tamaño controlado) */
+@media (min-width: 1024px) {
+    .clean-video {
+        max-width: 300px; 
+        height: 540px; 
+    }
+}
+
+/* EN CELULAR (Se ve 1 video grande) */
+@media (max-width: 767px) {
+    .clean-video {
+        max-width: 100%; 
+        height: auto;
+    }
+}
+
+/* ESTILOS BOTONES REDES SOCIALES */
+.social-follow-container {
+    text-align: center;
+    margin-top: 3rem;
+    padding: 2rem;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+}
+.social-buttons-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.btn-social-follow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    color: white;
+    transition: transform 0.3s;
+}
+.btn-social-follow:hover { transform: translateY(-3px); }
+.btn-tiktok { background: #000; }
+.btn-instagram { background: linear-gradient(45deg, #f09433, #bc1888); }
+.btn-facebook { background: #1877F2; }
+
+/* ========================================= */
+/* CORRECCIÓN CARRUSEL TIKTOK PARA PC        */
+/* ========================================= */
+
+.tiktok-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+@media (min-width: 1024px) {
+    .tiktok-content {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 3rem;
+    }
+    
+    .tiktok-carousel-container {
+        flex: 1;
+    }
+    
+    .social-sidebar {
+        flex: 0 0 350px;
+        margin-top: 0;
+    }
+    
+    /* Cambiar el carrusel para mostrar solo un video en PC */
+    .tiktok-carousel {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    
+    .tiktok-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+    }
+    
+    .clean-video {
+        max-width: 450px;
+        height: 600px;
+        border-radius: 16px;
+    }
+    
+    .social-follow-container {
+        margin-top: 0;
+        padding: 2rem;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    /* ========================================= */
+/* ESTILOS PARA BOTONES WHATSAPP EN CONTACTO */
+/* ========================================= */
+
+.contact-form .btn-whatsapp,
+.whatsapp-cta .btn-whatsapp {
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+    color: white;
+    padding: 0.8rem 2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+    font-weight: 600;
+    font-size: 0.95rem;
+    justify-content: center;
+    margin: 0.5rem auto;
+    max-width: 280px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.contact-form .btn-whatsapp:hover,
+.whatsapp-cta .btn-whatsapp:hover {
+    background: linear-gradient(135deg, #128C7E 0%, #25D366 100%);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+    transform: translateY(-2px);
+}
+
+.contact-form .btn-whatsapp:active,
+.whatsapp-cta .btn-whatsapp:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 10px rgba(37, 211, 102, 0.4);
+}
+
+/* Asegurar que el botón del formulario se vea bien */
+.contact-form button[type="submit"] {
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+    color: white;
+    padding: 0.8rem 2rem;
+    border-radius: 30px;
+    border: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+    display: block;
+    margin: 1rem auto;
+    max-width: 280px;
+    width: 100%;
+}
+
+.contact-form button[type="submit"]:hover {
+    background: linear-gradient(135deg, #128C7E 0%, #25D366 100%);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+    transform: translateY(-2px);
+}
+
+/* Centrar los botones en sus contenedores */
+.contact-form {
+    text-align: left;
+}
+
+.whatsapp-cta {
+    text-align: center;
+}
+
+.whatsapp-cta .btn {
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+/* Ajustes responsive */
+@media (max-width: 768px) {
+    .contact-form .btn-whatsapp,
+    .whatsapp-cta .btn-whatsapp,
+    .contact-form button[type="submit"] {
+        max-width: 100%;
+        padding: 0.7rem 1.5rem;
+    }
+}
+}
+
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <img src="https://i.postimg.cc/rs7xy5pW/Diseno-sin-titulo-(10).png" alt="Dr. Peñafiel - Especialista en Ortodoncia" class="logo-img">
+               <!-- <span class="logo-text">Dr. Peñafiel</span> -->
+            </a>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="#" class="nav-link" data-page="inicio">Inicio</a></li>
+                    <li><a href="#" class="nav-link" data-page="nosotros">Nosotros</a></li>
+                    <li><a href="#" class="nav-link" data-page="servicios">Servicios</a></li>
+                    <li><a href="#" class="nav-link" data-page="reseñas">Reseñas</a></li>
+                    <li><a href="#" class="nav-link" data-page="contacto">Contacto</a></li>
+                    <li>
+                        <a href="#" class="cart-icon" id="cartIcon" onclick="openCalendarModal(event)">
+                            <i class="fas fa-calendar-check"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Página de Inicio -->
+    <section id="inicio" class="page active">
+        <!-- Hero Section -->
+        <div class="hero">
+            <div class="container hero-container">
+                <div class="hero-text-content">
+                    <span class="hero-subtitle">ESPECIALISTA EN ORTODONCIA Y ORTOPEDIA MAXILOFACIAL</span>
+                    <h1>CUIDA TU SALUD, TRANSFORMA TU SONRISA</h1>
+                    <p>Transforma tu sonrisa con la mejor atención en ortodoncia de excelencia. Más de 10 años de experiencia dedicados a tu salud dental.</p>
+                    
+                    <div class="hero-buttons">
+                        <a href="#" class="btn btn-primary nav-link" data-page="servicios">Ver Servicios</a>
+                        <a href="https://wa.me/593983798707" class="btn btn-secondary">Agendar Cita</a>
+                    </div>
+                </div>
+                
+                <div class="hero-image-content">
+                    <div class="hero-main-image">
+                        <img src="imagenes/Imaen de grupo.jpeg" alt="Consulta dental">
+                    </div>
+                    <div class="hero-floating-image-1">
+                        <img src="imagenes/Primer circulo pequeño.jpeg" alt="Ortodoncia">
+                    </div>
+                    <div class="hero-floating-image-2">
+                        <img src="imagenes/segundo circulo pequeño.jpeg" alt="Sonrisa perfecta">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Servicios Destacados -->
+        <section class="featured-products">
+            <div class="container">
+                <h2 class="section-title">Servicios Destacados</h2>
+                <div class="products-slider" id="featuredProducts">
+                    <!-- Los servicios se cargarán dinámicamente con JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Sobre el Doctor -->
+        <section class="about-us-section">
+            <div class="container">
+                <div class="about-us-content">
+                    <div class="about-image-wrapper">
+                        <div class="about-main-image">
+                            <img src="https://i.postimg.cc/qBZvhkx2/Comparte-tu-experiencia-(1).png" alt="Dr. Peñafiel">
+                        </div>
+                        <div class="about-chef-image">
+                            <img src="https://i.postimg.cc/m21vgRD4/Comparte_tu_experiencia.png" alt="Certificaciones">
+                        </div>
+                        <div class="about-experience-box">
+                            <strong>10+</strong>
+                            <span>años de experiencia</span>
+                        </div>
+                    </div>
+                    
+                    <div class="about-text-wrapper">
+                        <span class="about-subtitle">• SOBRE EL DOCTOR</span>
+                        <h2>DR. LENIN FABRICIO PEÑAFIEL SARAGURO</h2>
+                        <p>Especialista en Ortodoncia y Ortopedia Maxilofacial con más de 10 años de experiencia. Me especializo en el diagnóstico, pronóstico, prevención y tratamiento de las anomalías cráneofaciodentales.</p>
+                        
+                        <ul class="about-checklist">
+                            <li><i class="fas fa-check"></i> Especialista en Ortodoncia - Universidad San Gregorio</li>
+                            <li><i class="fas fa-check"></i> Diplomados Internacionales en CPO Brasil</li>
+                            <li><i class="fas fa-check"></i> Tratamientos personalizados y avanzados</li>
+                        </ul>
+                        
+                        <div class="about-buttons">
+                            <a href="https://wa.me/593983798707" class="btn-about-primary">Agendar Cita</a>
+                            <a href="#" class="btn-about-secondary nav-link" data-page="nosotros">Conoce Más</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="container features-grid-container">
+                <hr class="features-divider">
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <i class="fas fa-tooth"></i>
+                        <h3>Diagnóstico Preciso</h3>
+                        <p>Análisis detallado utilizando herramientas avanzadas para identificar necesidades exactas.</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-star"></i>
+                        <h3>Tratamiento Avanzado</h3>
+                        <p>Técnicas modernas y tecnologías de vanguardia para resultados óptimos.</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-heart"></i>
+                        <h3>Seguimiento Especializado</h3>
+                        <p>Monitoreo constante durante cada etapa del tratamiento garantizando efectividad.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Galería de Sonrisas - CORREGIDA PARA PC -->
+       <section class="tiktok-section">
+            <div class="container">
+                <h2 class="section-title" style="text-align: center; margin-bottom: 2rem;">Nuestros Casos Reales</h2>
+                
+                <div class="tiktok-content">
+                    <div class="tiktok-carousel-container">
+                        <div class="swiper tiktok-carousel">
+                            <div class="swiper-wrapper">
+                                
+                                <div class="swiper-slide tiktok-slide">
+                                    <video class="clean-video" controls playsinline poster="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80">
+                                        <source src="videos/video1.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+
+                                <div class="swiper-slide tiktok-slide">
+                                    <video class="clean-video" controls playsinline poster="https://images.unsplash.com/photo-1629909615186-1c0c0d45ad46?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80">
+                                        <source src="videos/video2.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+
+                                <div class="swiper-slide tiktok-slide">
+                                    <video class="clean-video" controls playsinline poster="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80">
+                                        <source src="videos/tiktok2.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+
+
+
+                                <div class="swiper-slide tiktok-slide">
+                                    <video class="clean-video" controls playsinline poster="https://images.unsplash.com/photo-1629909615186-1c0c0d45ad46?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80">
+                                        <source src="videos/tiktok4.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+
+                                <div class="swiper-slide tiktok-slide">
+                                    <video class="clean-video" controls playsinline poster="https://images.unsplash.com/photo-1576097449790-4d4cbd096d47?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80">
+                                        <source src="videos/tiktok5.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+
+                            </div>
+                            <div class="swiper-button-next" style="color: #C6A648;"></div>
+                            <div class="swiper-button-prev" style="color: #C6A648;"></div>
+                        </div>
+                    </div>
+
+                    <div class="social-sidebar">
+                        <div class="social-follow-container">
+                            <h3>Síguenos en redes sociales</h3>
+                            <p>Mantente al día con nuestros últimos casos y consejos de salud dental.</p>
+                            <div class="social-buttons-row">
+                                <a href="https://www.tiktok.com/@tu.nueva.sonrisa" target="_blank" class="btn-social-follow btn-tiktok">
+                                    <i class="fab fa-tiktok"></i> TikTok
+                                </a>
+                                <a href="https://www.instagram.com/tunuevasonrisa7/" target="_blank" class="btn-social-follow btn-instagram">
+                                    <i class="fab fa-instagram"></i> Instagram
+                                </a>
+                                <a href="https://www.facebook.com/tunuevasonrisa7/" target="_blank" class="btn-social-follow btn-facebook">
+                                    <i class="fab fa-facebook-f"></i> Facebook
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonial Preview -->
+        <section class="testimonial-preview">
+            <div class="container">
+                <h2 class="section-title">Opiniones de Pacientes</h2>
+                <div class="testimonials-slider">
+                    <div class="testimonial">
+                        <p class="testimonial-text">El Dr. Peñafiel transformó completamente mi sonrisa. Su atención profesional y el seguimiento durante todo el tratamiento fueron excepcionales. ¡Recomendado 100%!</p>
+                        <p class="testimonial-author">- María González</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Ubicación y Video -->
+        <section class="location-video-section">
+            <div class="container">
+                <h2 class="section-title">Visita Nuestra Clínica</h2>
+                <div class="location-video-container">
+                    <video class="location-video" controls playsinline style="width: 100%; max-width: 800px; height: auto; border-radius: 12px; box-shadow: 0 10px 40px rgba(0,0,0,0.15);">
+                        <source src="videos/ubicacion.mp4" type="video/mp4">
+                        Tu navegador no soporta la etiqueta de vídeo.
+                    </video>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- Página Nosotros -->
+   <section id="nosotros" class="page">
+        
+        <div class="corporate-banner">
+            <div class="container">
+                <h1 class="corporate-title">NUESTRA <strong>PASIÓN</strong></h1>
+                <div class="corporate-divider"></div>
+            </div>
+        </div>
+
+        <div class="container float-card-container">
+            <div class="float-card">
+                <div class="float-card-content">
+                    <div class="top-nav-links">EXPERIENCIA | TECNOLOGÍA | CALIDAD</div>
+                    <h2 class="float-heading">10+ AÑOS <br><strong>TRANSFORMANDO SONRISAS</strong></h2>
+                    <div class="float-icon"><i class="fas fa-tooth"></i></div>
+                    <p>Soy el Dr. Lenin Peñafiel, especialista en Ortodoncia y Ortopedia Maxilofacial. Mi filosofía es simple: combinar la precisión científica con un trato humano y cálido.</p>
+                    <p>Me especializo en el diagnóstico, pronóstico, prevención y tratamiento de las anomalías cráneofaciodentales, utilizando tecnología de vanguardia.</p>
+                    <div class="social-links" style="margin-top: 2rem;">
+                        <a href="#" style="color: var(--black); border-color: #ccc;"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/593983798707" target="_blank" style="color: var(--black); border-color: #ccc;"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="float-card-image">
+                    <img src="https://i.postimg.cc/qBZvhkx2/Comparte-tu-experiencia-(1).png" alt="Dr. Peñafiel">
+                    <div class="image-overlay-text">
+                        <h3>TU SONRISA</h3>
+                        <h2>EN MANOS DE<br>EXPERTOS</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-bar">
+                <span>CONOCE NUESTROS <strong>TRATAMIENTOS</strong></span>
+                <a href="#" class="btn-download nav-link" data-page="servicios">VER SERVICIOS <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+
+        <div class="team-timeline-wrapper">
+            <div class="container">
+                <div class="timeline-header">
+                    <h2>Nuestro Equipo de Especialistas</h2>
+                    <p>Profesionales altamente calificados para tu salud integral</p>
+                </div>
+
+                <div class="team-centered-row">
+    <div class="team-card-wrapper">
+        <div class="team-card">
+            <div class="team-img-box">
+                <img src="https://i.postimg.cc/Bn9Cf1Ht/Imagen-de-Whats-App-2025-11-26-a-las-07-45-26-94104f45.jpg" alt="Dr. Enrique Vásconez">
+            </div>
+            <div class="team-badge-circle" style="background: #2c3e50;">
+                <i class="fas fa-user-md"></i>
+                <span>CIRUJANO</span>
+            </div>
+            <div class="team-content-box">
+                <h3>Dr. Enrique Vásconez Yépez</h3>
+                <p style="color: var(--gold); font-weight:700; margin-bottom:0.5rem; letter-spacing: 1px;">CIRUJANO MAXILOFACIAL</p>
+                <p>Especialista en cirugía reconstructiva, implantes dentales complejos y patologías de los maxilares.</p>
+                <a href="https://wa.me/593983798707" class="btn-team-gray">AGENDAR CITA</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="team-card-wrapper">
+        <div class="team-card">
+            <div class="team-img-box">
+                <img src="https://i.postimg.cc/T3VJdYJk/Imagen-de-Whats-App-2025-11-26-a-las-07-46-51-f42a8b2f.jpg" alt="Dra. Claudia Morocho">
+            </div>
+            <div class="team-badge-circle" style="background: #805A28;">
+                <i class="fas fa-tooth"></i>
+                <span>ENDO.</span>
+            </div>
+            <div class="team-content-box">
+                <h3>Dra. Claudia Morocho</h3>
+                <p style="color: var(--gold); font-weight:700; margin-bottom:0.5rem; letter-spacing: 1px;">ENDODONCISTA</p>
+                <p>Experta en tratamientos de conducto, salvamento de piezas dentales y manejo del dolor dental agudo.</p>
+                <a href="https://wa.me/593983798707" class="btn-team-gray">AGENDAR CITA</a>
+            </div>
+        </div>
+    </div>
+</div>
+            </div>
+        </div>
+
+        <section class="gallery-section">
+    <div class="container">
+        <div class="gallery-intro">
+            <h2>Instalaciones de Vanguardia</h2>
+            <p>Tecnología avanzada en un ambiente diseñado para tu confort y seguridad.</p>
+        </div>
+        <div class="pro-gallery-grid">
+            <div class="gallery-item">
+                <img src="https://i.postimg.cc/jq1Xv1j7/Imagen-de-Whats-App-2025-11-25-a-las-20-07-45-ead8dad1.jpg" alt="Clínica Dental">
+                <div class="gallery-overlay"><h4>Tecnología 3D</h4></div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://i.postimg.cc/yx2ydDGF/Imagen-de-Whats-App-2025-11-25-a-las-20-07-45-640d51c3.jpg" alt="Sillón Dental">
+                <div class="gallery-overlay"><h4>Confort Total</h4></div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://i.postimg.cc/FzYxNyT3/Imagen-de-Whats-App-2025-11-25-a-las-20-07-45-09130f47.jpg" alt="Instrumental">
+                <div class="gallery-overlay"><h4>Esterilización</h4></div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://i.postimg.cc/d1H9bHm4/Imagen-de-Whats-App-2025-11-25-a-las-20-06-41-829ba402.jpg" alt="Consultorio">
+                <div class="gallery-overlay"><h4>Áreas Modernas</h4></div>
+            </div>
+            <div class="gallery-item">
+                <img src="imagenes/Cuarto de clinica.jpeg" alt="Atención">
+                <div class="gallery-overlay"><h4>Atención Personalizada</h4></div>
+            </div>
+             <div class="gallery-item">
+                <img src="imagenes/Recepcion.jpeg" alt="Recepción">
+                <div class="gallery-overlay"><h4>Ambiente Relax</h4></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    </section>
+    
+    <!-- Página Servicios -->
+    <section id="servicios" class="page">
+        <div class="page-banner">
+            <div class="container">
+                <h1>Nuestros Servicios</h1>
+                <p>Tratamientos especializados en ortodoncia y ortopedia maxilofacial</p>
+            </div>
+        </div>
+
+        <div class="collection-filters">
+            <div class="container">
+                <div class="filters">
+                    <button class="filter-btn active" data-filter="all">Todos</button>
+                    <button class="filter-btn" data-filter="ortodoncia">Ortodoncia</button>
+                    <button class="filter-btn" data-filter="ortopedia">Ortopedia</button>
+                    <button class="filter-btn" data-filter="estetica">Estética</button>
+                    <button class="filter-btn" data-filter="casos">Casos Clínicos</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="product-grid" id="orderGridView">
+                <!-- Los servicios se cargarán dinámicamente con JavaScript -->
+            </div>
+            
+            <!-- Sección de Casos Clínicos (Antes y Después) -->
+            <div id="casosClinicosSection" class="casos-clinicos-section" style="display: none;">
+                <h2 class="section-title">Transformaciones Reales</h2>
+                <div class="before-after-container">
+                    <div class="before-after-wrapper">
+                        <img src="imagenes/Antes.png" alt="Antes del tratamiento" class="before-after-image">
+                        <img src="imagenes/Despues.png" alt="Después del tratamiento" class="before-after-image after-image">
+                        <div class="before-after-handle"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Página Reseñas -->
+    <section id="reseñas" class="page">
+        <div class="page-banner">
+            <div class="container">
+                <h1>Reseñas de Nuestros Pacientes</h1>
+                <p>Lo que nuestros pacientes dicen sobre nosotros</p>
+            </div>
+        </div>
+
+        <section class="testimonial-preview" style="padding: 5rem 0;">
+            <div class="container">
+                <h2 class="section-title">Opiniones de Pacientes</h2>
+                
+                <div class="testimonials-slider">
+                    <div class="testimonial">
+                        <p class="testimonial-text">"El Dr. Peñafiel es un profesional excelente. Su atención es personalizada y los resultados de mi tratamiento superaron mis expectativas. Mi sonrisa ahora es perfecta gracias a él."</p>
+                        <p class="testimonial-author">- Ana López</p>
+                    </div>
+                    <div class="testimonial">
+                        <p class="testimonial-text">"Llevé a mi hija de 10 años para tratamiento de ortodoncia interceptiva y los resultados han sido increíbles. El Dr. Peñafiel tiene un trato excelente con los niños."</p>
+                        <p class="testimonial-author">- Carlos Mendoza</p>
+                    </div>
+                    <div class="testimonial">
+                        <p class="testimonial-text">"Después de años de sentirme inseguro con mi sonrisa, decidí realizarme un tratamiento de ortodoncia invisible con el Dr. Peñafiel. Fue la mejor decisión, el proceso fue cómodo y los resultados excelentes."</p>
+                        <p class="testimonial-author">- Roberto Silva</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- Página Contacto -->
+    <section id="contacto" class="page">
+        <div class="page-banner">
+            <div class="container">
+                <h1>Contáctanos</h1>
+                <p>Estamos aquí para responder tus preguntas y agendar tu cita</p>
+            </div>
+        </div>
+
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-container">
+                    <div class="contact-form">
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Nombre</label>
+                                <input type="text" id="name" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Teléfono</label>
+                                <input type="tel" id="phone" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Mensaje</label>
+                                <textarea id="message" class="form-control" required></textarea>
+                            </div>
+<button type="submit" class="btn-whatsapp" style="display: block; margin-left: 0;">
+    <i class="fab fa-whatsapp"></i> Enviar por WhatsApp
+</button>                        </form>
+                    </div>
+                    
+                    <div>
+                        <div class="map-container">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.781575734575!2d-78.5123889250111!3d-0.2204352353520299!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d59a1059ce2b9d%3A0x71a0a2b0e8d0d7d1!2sQuito%2C%20Ecuador!5e0!3m2!1ses!2sus!4v1647892345678!5m2!1ses!2sus" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                        
+                        <div class="contact-info" style="margin-top: 2rem;">
+                           <h3>Información de contacto</h3>
+                           <p><i class="fas fa-map-marker-alt"></i> Rocafuerte y Villaroel Esquina (2do Piso), Riobamba, Ecuador</p>
+                           <p><i class="fas fa-phone"></i> 098 379 8707</p>
+                           <p><i class="fas fa-envelope"></i> leninn1988@hotmail.com</p> 
+                           <p><i class="fas fa-clock"></i> Lunes a Viernes: 08:30 - 19:00 | Sábados: 08:30 - 17:00</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="whatsapp-cta">
+                    <h3>¿Prefieres contactarnos directamente?</h3>
+                    <p>Contáctanos por WhatsApp para una consulta rápida y atención personalizada.</p>
+                       <a href="https://wa.me/593983798707" class="btn-whatsapp">
+                       <i class="fab fa-whatsapp"></i> Abrir WhatsApp
+                    </a>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section footer-links">
+                    <h3>Enlaces rápidos</h3>
+                    <ul>
+                        <li><a href="#" class="nav-link" data-page="inicio">Inicio</a></li>
+                        <li><a href="#" class="nav-link" data-page="servicios">Servicios</a></li>
+                        <li><a href="#" class="nav-link" data-page="nosotros">Nosotros</a></li>
+                        <li><a href="#" class="nav-link" data-page="contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section contact-info">
+                    <h3>Contacto</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Rocafuerte y Villaroel Esquina (2do Piso), Riobamba, Ecuador</p>
+                    <p><i class="fas fa-phone"></i> 098 379 8707</p>
+                    <p><i class="fas fa-envelope"></i> leninn1988@hotmail.com</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Síguenos</h3>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/share/17cxWMqVJ4/?mibextid=wwXIfr" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.tiktok.com/@tu.nueva.sonrisa?_r=1&_t=ZM-91Tli7ZmxFj" target="_blank"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://wa.me/593983798707" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2025 Dr. Peñafiel - Especialista en Ortodoncia y Ortopedia Maxilofacial | Tu sonrisa en manos de expertos.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/593983798707?text=Hola,%20quiero%20agendar%20una%20cita%20de%20consulta" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-tooltip">¡Agenda tu cita!</span>
+    </a>
+
+    <!-- Logo Flotante -->
+    <a href="#" class="gif-logo-float">
+        <img src="https://i.postimg.cc/T3t2rfVv/Comparte-tu-experiencia.gif" alt="Logo animado">
+    </a>
+
+    <!-- Service Modal -->
+    <div class="modal-overlay" id="productModal">
+        <div class="product-modal">
+            <div class="modal-header">
+                <h3>Información del Servicio</h3>
+                <button class="modal-close" id="modalClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="modal-body">
+                <div class="modal-gallery">
+                    <div class="main-image">
+                        <img id="modalImage" src="" alt="Servicio dental">
+                    </div>
+                </div>
+
+                <div class="modal-content">
+                    <h2 class="modal-title" id="modalTitle" style="margin-bottom: 0.5rem;">Nombre del Servicio</h2>
+                    <p class="modal-description" id="modalDescription" style="color: #444; font-size: 0.95rem; line-height: 1.6;"></p>
+
+                    <div class="modal-features" style="margin-top: 2rem;">
+                        <h4 style="font-size: 0.9rem; text-transform: uppercase; color: #999;">Beneficios:</h4>
+                        <ul id="modalFeatures"></ul>
+                    </div>
+                    
+                    <div class="modal-actions">
+                        <a href="https://wa.me/593983798707" class="btn btn-whatsapp" id="buyWhatsApp">
+                            <i class="fab fa-whatsapp"></i> AGENDAR CITA
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Modal (Citas) -->
+    <div class="modal-overlay" id="cartModal">
+        <div class="cart-modal">
+            <div class="modal-header">
+                <h3>Tu Cita</h3>
+                <button class="modal-close" id="cartClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="cart-items" id="cartItems">
+                <!-- Citas se agregarán con JavaScript -->
+            </div>
+            <div class="cart-actions">
+                <a href="#" class="btn btn-whatsapp" id="checkoutWhatsApp">
+                    <i class="fab fa-whatsapp"></i> Confirmar Cita por WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Calendar Modal -->
+    <div class="modal-overlay" id="calendarModal">
+        <div class="calendar-modal">
+            <div class="calendar-modal-header">
+                <h3>Agenda tu Cita</h3>
+                <button class="calendar-modal-close" onclick="closeCalendarModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="calendar-modal-body">
+                <iframe class="calendar-iframe" src="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2OiVZLj6NJ-co2JkwXdgWgQ820HGzWxj4z_onb8nBF_S3gE8JlCzbhzz_SVwf0wIDZTH6tYF0S"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        // =============================================
+        // 1. DATOS (SERVICIOS DENTALES)
+        // =============================================
+
+        const servicesData = [
+            {
+                id: 1,
+                name: "Ortodoncia Metálica",
+                price: "Consultar",
+                image: "imagenes/Ortodoncia metalica.png",
+                description: "Sistema clásico de alta durabilidad para la corrección precisa de maloclusiones. Utilizamos brackets convencionales que garantizan un control total sobre el movimiento dental.",
+                features: [
+                    "Ideal para maloclusiones severas, apiñamiento y sobremordidas",
+                    "Máxima resistencia y durabilidad del material",
+                    "Control preciso de los movimientos dentales",
+                    "Resultados confiables y estables a largo plazo"
+                ],
+                category: "ortodoncia"
+            },
+            {
+                id: 2,
+                name: "Ortodoncia de Autoligado",
+                price: "Consultar",
+                image: "imagenes/Ortodoncia Autoligado.png",
+                description: "Tecnología avanzada que elimina las ligaduras elásticas. Los brackets poseen una compuerta especial que reduce la fricción, permitiendo movimientos más biológicos y rápidos.",
+                features: [
+                    "Menor fricción y mayor comodidad para el paciente",
+                    "Resultados más rápidos con visitas más espaciadas",
+                    "Mejor higiene al no usar ligaduras elásticas",
+                    "Ideal para correcciones complejas con menor presión"
+                ],
+                category: "ortodoncia"
+            },
+            {
+                id: 3,
+                name: "Ortodoncia Estética",
+                price: "Consultar",
+                image: "imagenes/Ortodoncia Estetica.png",
+                description: "Brackets de Zafiro o Cerámica que se mimetizan con el color del diente. La opción perfecta para pacientes que buscan corregir su sonrisa sin comprometer su imagen.",
+                features: [
+                    "Alta estética: Brackets prácticamente imperceptibles",
+                    "No se manchan ni cambian de color",
+                    "Misma efectividad que los brackets metálicos",
+                    "Discreción total durante todo el tratamiento"
+                ],
+                category: "ortodoncia"
+            },
+            {
+                id: 4,
+                name: "Ortodoncia Lingual",
+                price: "Consultar",
+                image: "imagenes/Ortodoncia Lingual.png",
+                description: "La verdadera ortodoncia invisible. Los brackets se cementan en la cara interna (posterior) de los dientes, haciéndolos totalmente imperceptibles desde el exterior al sonreír.",
+                features: [
+                    "Totalmente invisible desde el exterior",
+                    "Ideal para personas con alta exposición pública",
+                    "Corrección precisa sin comprometer la estética facial",
+                    "Personalización adaptada a la anatomía interna del diente"
+                ],
+                category: "ortodoncia"
+            },
+            {
+                id: 7,
+                name: "Invisalign (Alineadores)",
+                price: "Consultar",
+                image: "imagenes/Invisaling.png",
+                description: "Sistema de alineadores transparentes y removibles hechos a medida. Permite corregir la posición dental de manera cómoda, sin metales y facilitando la higiene diaria.",
+                features: [
+                    "100% Removibles para comer y cepillarse",
+                    "Estética superior: Casi invisibles a la vista",
+                    "Mayor comodidad sin roces ni llagas",
+                    "Permite mantener una higiene bucal óptima"
+                ],
+                category: "estetica"
+            },
+            {
+                id: 8,
+                name: "Micro Implantes",
+                price: "Consultar",
+                image: "imagenes/Micro Implantes.png",
+                description: "Uso de Microimplantes (Intra y Extra Radiculares) y Mini Placas. Herramientas avanzadas que proporcionan soporte adicional para lograr movimientos dentales complejos que los brackets solos no pueden realizar.",
+                features: [
+                    "Permite movimientos complejos sin cirugía mayor",
+                    "Anclaje absoluto para casos difíciles",
+                    "Microimplantes Intra y Extra Radiculares",
+                    "Uso de Mini Placas para correcciones esqueléticas"
+                ],
+                category: "estetica"
+            },
+            {
+                id: 11,
+                name: "Mini Placas",
+                price: "Consultar",
+                image: "imagenes/Mini Placas.png",
+                description: "Dispositivos de anclaje esquelético que proporcionan soporte absoluto para movimientos dentales complejos. Las Mini Placas son herramientas avanzadas que permiten realizar correcciones que los brackets convencionales no pueden lograr.",
+                features: [
+                    "Anclaje absoluto para casos complejos",
+                    "Permite movimientos dentales precisos y controlados",
+                    "Ideal para correcciones esqueléticas",
+                    "Herramienta avanzada para ortodoncia de precisión"
+                ],
+                category: "estetica"
+            },
+            {
+                id: 5,
+                name: "Ortopedia Dental",
+                price: "Consultar",
+                image: "imagenes/Ortopedia Dental.png",
+                description: "Tratamientos preventivos e interceptivos desde los 5 años. Incluye la corrección de malos hábitos (succión de dedo), Ortopedia Preventiva y la Técnica 4x2 para alinear incisivos en dentición mixta.",
+                features: [
+                    "Diagnóstico temprano (ideal entre 8 y 10 años)",
+                    "Técnica 4x2 para alineación en dentición mixta",
+                    "Corrección de Mordida Abierta, Profunda y Cruzada",
+                    "Guía el crecimiento correcto de los maxilares"
+                ],
+                category: "ortopedia"
+            },
+
+
+
+        ];
+
+        const services = {};
+        servicesData.forEach(s => services[s.id] = s);
+
+        // Funciones para el modal del calendario
+        function openCalendarModal(event) {
+            event.preventDefault();
+            document.getElementById('calendarModal').classList.add('active');
+        }
+
+        function closeCalendarModal() {
+            document.getElementById('calendarModal').classList.remove('active');
+        }
+
+        // Cerrar modal al hacer clic en el overlay
+        document.addEventListener('click', function(event) {
+            const calendarModal = document.getElementById('calendarModal');
+            if (event.target === calendarModal) {
+                closeCalendarModal();
+            }
+        });
+
+        // =============================================
+        // 2. FUNCIONALIDADES PRINCIPALES
+        // =============================================
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Inicializar servicios
+            renderServices(servicesData.slice(0,4), document.getElementById('featuredProducts'));
+            renderServices(servicesData, document.getElementById('orderGridView'), false);
+
+            // Header Scroll
+            window.addEventListener('scroll', function() {
+                const header = document.querySelector('header');
+                if (window.scrollY > 50) header.classList.add('scrolled');
+                else header.classList.remove('scrolled');
+            });
+
+            // Mobile Menu
+            document.querySelector('.mobile-menu-btn').addEventListener('click', () => {
+                document.querySelector('nav').classList.toggle('active');
+            });
+
+            // Navegación Páginas
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const target = this.dataset.page;
+                    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+                    document.getElementById(target).classList.add('active');
+                    document.querySelector('nav').classList.remove('active');
+                    window.scrollTo(0,0);
+                });
+            });
+
+            // Swiper Galería
+            new Swiper('.gallery-carousel', {
+                loop: true,
+                slidesPerView: 1,
+                spaceBetween: 20,
+                navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+                breakpoints: { 768: { slidesPerView: 2 }, 992: { slidesPerView: 3 } }
+            });
+
+            // =========================================
+            // SWIPER TIKTOK - CORREGIDO PARA PC
+            // =========================================
+
+            const tiktokSwiper = new Swiper('.tiktok-carousel', {
+                slidesPerView: 1,
+                spaceBetween: 20,
+                centeredSlides: true,
+                loop: false,
+                observer: true,
+                observeParents: true,
+                
+                navigation: { 
+                    nextEl: '.swiper-button-next', 
+                    prevEl: '.swiper-button-prev' 
+                },
+                
+                breakpoints: {
+                    768: { 
+                        slidesPerView: 1.2, 
+                        spaceBetween: 30,
+                        centeredSlides: true 
+                    },
+                    1024: { 
+                        slidesPerView: 1,  // En PC solo muestra 1
+                        spaceBetween: 40,
+                        centeredSlides: true
+                    }
+                },
+                
+                on: {
+                    slideChange: function () {
+                        document.querySelectorAll('.tiktok-carousel video').forEach(v => v.pause());
+                    }
+                }
+            });
+
+            // Filtros de servicios
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    const filter = this.dataset.filter;
+                    const container = document.getElementById('orderGridView');
+                    const casosSection = document.getElementById('casosClinicosSection');
+                    
+                    if (filter === 'casos') {
+                        container.style.display = 'none';
+                        casosSection.style.display = 'block';
+                    } else {
+                        container.style.display = 'grid';
+                        casosSection.style.display = 'none';
+                        
+                        if (filter === 'all') {
+                            renderServices(servicesData, container, false);
+                        } else {
+                            const filtered = servicesData.filter(s => s.category === filter);
+                            renderServices(filtered, container, false);
+                        }
+                    }
+                });
+            });
+
+            // Inicializar comparador de antes/después
+            const beforeAfterWrapper = document.querySelector('.before-after-wrapper');
+            if (beforeAfterWrapper) {
+                const handle = beforeAfterWrapper.querySelector('.before-after-handle');
+                const afterImage = beforeAfterWrapper.querySelector('.after-image');
+                let isActive = false;
+
+                const updateSlider = (e) => {
+                    if (!isActive) return;
+                    
+                    const rect = beforeAfterWrapper.getBoundingClientRect();
+                    let x = e.clientX - rect.left;
+                    
+                    // Para touch
+                    if (e.touches) {
+                        x = e.touches[0].clientX - rect.left;
+                    }
+                    
+                    // Limitar entre 0 y ancho del contenedor
+                    x = Math.max(0, Math.min(x, rect.width));
+                    const percentage = (x / rect.width) * 100;
+                    
+                    handle.style.left = percentage + '%';
+                    afterImage.style.clipPath = 'inset(0 ' + (100 - percentage) + '% 0 0)';
+                };
+
+                handle.addEventListener('mousedown', () => {
+                    isActive = true;
+                });
+
+                document.addEventListener('mouseup', () => {
+                    isActive = false;
+                });
+
+                beforeAfterWrapper.addEventListener('mousemove', updateSlider);
+                beforeAfterWrapper.addEventListener('touchstart', () => {
+                    isActive = true;
+                });
+                beforeAfterWrapper.addEventListener('touchend', () => {
+                    isActive = false;
+                });
+                beforeAfterWrapper.addEventListener('touchmove', updateSlider);
+            }
+
+            // Formulario de contacto
+            // Formulario de contacto CORREGIDO
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
+    const message = document.getElementById('message').value;
+    
+    // Mensaje formateado con negritas usando formato WhatsApp
+    const text = `*NUEVO MENSAJE DESDE LA WEB*%0A%0A*Nombre:* ${name}%0A*Email:* ${email}%0A*Teléfono:* ${phone}%0A*Mensaje:* ${message}%0A%0A_Quiero agendar una cita_`;
+    
+    window.open(`https://wa.me/593983798707?text=${text}`, '_blank');
+});
+        });
+
+        // Renderizar servicios
+        function renderServices(servicesArray, container, listView = false) {
+            container.innerHTML = '';
+            if (listView) container.classList.add('product-list-view');
+            else container.classList.remove('product-list-view');
+
+            servicesArray.forEach(service => {
+                const card = document.createElement('div');
+                card.className = 'product-card';
+                card.setAttribute('data-category', service.category);
+                card.innerHTML = `
+                    <div class="product-img"><img src="${service.image}" loading="lazy"></div>
+                    <div class="product-info">
+                        <h3>${service.name}</h3>
+                        <div class="product-price">${service.price}</div>
+                        <p class="product-description">${service.description}</p>
+                        <div class="product-actions">
+                            <a href="#" class="btn-details" data-service="${service.id}"><i class="fas fa-eye"></i> Ver detalles</a>
+                            <a href="https://wa.me/593983798707" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> Agendar cita</a>
+                        </div>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+            attachServiceEvents();
+        }
+
+        function attachServiceEvents() {
+            document.querySelectorAll('.btn-details').forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    showServiceModal(services[this.dataset.service]);
+                });
+            });
+        }
+
+        // Mostrar modal de servicio
+        function showServiceModal(service) {
+            document.getElementById('modalImage').src = service.image;
+            document.getElementById('modalTitle').textContent = service.name;
+            document.getElementById('modalDescription').textContent = service.description;
+
+            const feats = document.getElementById('modalFeatures');
+            feats.innerHTML = '';
+            service.features.forEach(f => feats.innerHTML += `<li>${f}</li>`);
+
+            document.getElementById('productModal').classList.add('active');
+        }
+
+        // Cerrar modales
+        document.getElementById('modalClose').onclick = () => document.getElementById('productModal').classList.remove('active');
+        document.getElementById('cartClose').onclick = () => document.getElementById('cartModal').classList.remove('active');
+
+        // Carrito de citas (simplificado)
+        let appointments = [];
+
+        // ======================================================
+        // LÓGICA DE NAVEGACIÓN PERSISTENTE (Para que no se reinicie)
+        // ======================================================
+
+        // 1. Función maestra para cambiar de página
+        function switchPage(pageId) {
+            const targetSection = document.getElementById(pageId);
+            
+            // Solo hacemos algo si la sección existe
+            if (targetSection) {
+                // Ocultamos TODAS las páginas
+                document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+                
+                // Mostramos la página que queremos
+                targetSection.classList.add('active');
+                
+                // Cerramos el menú móvil si está abierto
+                const nav = document.querySelector('nav');
+                if (nav) nav.classList.remove('active');
+
+                // Subimos al inicio suavemente
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }
+
+        // 2. Detectar qué página mostrar CUANDO CARGA LA WEB
+        // Esto es lo que soluciona tu problema
+        const currentHash = window.location.hash.substring(1); // Leemos lo que hay después del #
+        
+        if (currentHash) {
+            // Si hay un hash (ej: #resenas), vamos ahí directo
+            switchPage(currentHash);
+        } else {
+            // Si no hay nada, vamos al inicio
+            switchPage('inicio');
+        }
+
+        // 3. Manejar los clics en el menú
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault(); // Evitamos el salto brusco
+                const targetId = this.dataset.page; // Leemos el data-page="servicios"
+                
+                // Cambiamos la página visualmente
+                switchPage(targetId);
+                
+                // IMPORTANTE: Actualizamos la URL sin recargar
+                // Esto pone el #servicios en la barra
+                history.pushState(null, null, `#${targetId}`);
+            });
+        });
+
+        // 4. Manejar el botón "Atrás" del navegador
+        // Para que si el usuario da "Atrás" en su celular, cambie de sección y no se salga
+        window.addEventListener('popstate', function() {
+            const hash = window.location.hash.substring(1);
+            if(hash) switchPage(hash);
+            else switchPage('inicio');
+        });
+
+    </script>
+    <script async src="https://www.tiktok.com/embed.js"></script>
+
+</body>
+</html>            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Lato', sans-serif;
+            color: var(--black);
+            background-color: var(--white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* ============================================= */
+        /* HEADER Y HERO - PREMIUM METÁLICO */
+        /* ============================================= */
+
+        header {
+            background: linear-gradient(135deg, rgba(128, 90, 40, 0.95) 0%, rgba(198, 166, 72, 0.9) 100%) !important;
+            backdrop-filter: blur(15px) !important;
+            -webkit-backdrop-filter: blur(15px) !important;
+            border-bottom: 1px solid rgba(249, 228, 150, 0.3) !important;
+            box-shadow: 0 5px 20px rgba(128, 90, 40, 0.2) !important;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+        }
+
+        header.scrolled {
+            background: linear-gradient(135deg, rgba(128, 90, 40, 0.98) 0%, rgba(198, 166, 72, 0.95) 100%) !important;
+            box-shadow: 0 8px 25px rgba(128, 90, 40, 0.25) !important;
+        }
+
+        header.scrolled .header-container {
+            padding: 0.5rem 0;
+        }
+
+        header.scrolled .logo-img {
+            width: 120px;
+            height: auto;
+        }
+
+        header.scrolled .logo-text {
+            font-size: 1.8rem;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+            transition: padding 0.3s ease;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            text-decoration: none; 
+        }
+        .logo-img {
+            width: 180px;
+            height: auto;
+            transition: var(--transition);
+        }
+        .logo:hover .logo-img {
+            transform: rotate(10deg);
+        }
+        .logo-text {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.2rem;
+            font-weight: 700;
+            background: var(--gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 2px 2px 10px rgba(198, 166, 72, 0.3);
+            letter-spacing: 1px;
+            transition: font-size 0.3s ease;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            align-items: center;
+        }
+        nav ul li {
+            margin-left: 2rem;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: var(--white);
+            font-weight: 600;
+            transition: var(--transition);
+            position: relative;
+            text-shadow: none;
+        }
+        nav ul li a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            bottom: -8px;
+            left: 0;
+            background: var(--gold);
+            transition: var(--transition);
+        }
+        nav ul li a:hover {
+            color: #F9E496;
+        }
+        nav ul li a:hover:after {
+            width: 100%;
+        }
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--white);
+        }
+
+        .cart-icon {
+            position: relative;
+            cursor: pointer;
+            font-size: 1.5rem;
+            transition: var(--transition);
+            color: #F9E496;
+        }
+        .cart-icon:hover {
+            color: var(--white);
+        }
+        .cart-count {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: var(--gold);
+            color: var(--black);
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: 700;
+        }
+
+        .hero {
+            height: 100vh;
+            width: 100%;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            overflow: hidden;
+        }
+
+        section#inicio {
+            background-image: linear-gradient(rgba(26, 26, 26, 0.7), rgba(26, 26, 26, 0.8)),	
+                              url('https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-top: 80px;
+        }
+
+        .hero-text-content {
+            flex: 1 1 50%;
+            animation: fadeIn 1.5s ease;
+        }
+
+        .hero-text-content .hero-subtitle {
+            display: block;
+            font-family: 'Lato', sans-serif;
+            font-weight: 700;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            background: var(--gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+        }
+
+        .hero-text-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--white);
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-text-content p {
+            font-family: 'Lato', sans-serif;
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 2.5rem;
+            max-width: 500px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        .hero-buttons .btn-primary {
+            background: var(--gold);
+            color: var(--black) !important;
+            font-weight: 700;
+            padding: 0.8rem 2rem;
+            border-radius: 50px; 
+            text-decoration: none;
+            transition: var(--transition);
+            display: inline-block;
+            border: none;
+            box-shadow: 0 5px 15px rgba(198, 166, 72, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-buttons .btn-primary:hover {
+            box-shadow: 0 8px 25px rgba(198, 166, 72, 0.6);
+            transform: translateY(-3px);
+        }
+        .hero-buttons .btn-secondary {
+            border: 2px solid;
+            border-image: var(--gold) 1;
+            color: #F9E496;
+            background-color: transparent;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: var(--transition);
+            display: inline-block;
+            font-weight: 700;
+        }
+        .hero-buttons .btn-secondary:hover {
+            background: var(--gold);
+            color: var(--black);
+            border-image: none;
+            transform: translateY(-3px);
+        }
+
+        .hero-image-content {
+            flex: 1 1 50%;
+            position: relative;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-main-image {
+            width: 500px;
+            height: 450px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 2px solid rgba(249, 228, 150, 0.3);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+            animation: floatImage 4s ease-in-out infinite alternate;
+        }
+
+        @keyframes floatImage {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-15px); }
+        }
+
+        .hero-main-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-floating-image-1,
+        .hero-floating-image-2 {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 5px solid var(--black);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.7);
+            animation: pulse 3s infinite;
+        }
+        .hero-floating-image-1 {
+            top: 50px;
+            right: 0px;
+        }
+        .hero-floating-image-2 {
+            bottom: 50px;
+            left: 0px;
+        }
+        .hero-floating-image-1 img,
+        .hero-floating-image-2 img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .featured-products {
+            padding: 5rem 0;
+            background-color: var(--warm-beige);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+            background: var(--gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 700;
+        }
+        
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: var(--gold);
+            margin: 1rem auto;
+            border-radius: 2px;
+        }
+        
+        .products-slider {
+            display: flex;
+            gap: 2rem;
+            overflow-x: auto;
+            padding: 1rem 0;
+            scroll-behavior: smooth;
+        }
+        
+        .product-card {
+            min-width: 300px;
+            background: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            transition: var(--transition);
+            position: relative;
+            border: 1px solid rgba(249, 228, 150, 0.1);
+        }
+        
+        .product-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gold);
+            z-index: 2;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--card-shadow-hover);
+        }
+        
+        .product-img {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .product-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .product-card:hover .product-img img {
+            transform: scale(1.1);
+        }
+        
+        .product-info {
+            padding: 1.5rem;
+        }
+        
+        .product-info h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .product-price { 
+            font-weight: 800; 
+            font-size: 1.4rem; 
+            margin-bottom: 1rem; 
+            background: var(--gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .product-description {
+            color: #444;
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+        }
+        
+        .product-actions {
+            display: flex;
+            gap: 0.5rem;
+        }
+        
+        .btn-whatsapp {
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: var(--transition);
+            flex: 1;
+            justify-content: center;
+            border: none;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+            font-weight: 600;
+        }
+        
+        .btn-whatsapp:hover {
+            background: linear-gradient(135deg, #128C7E 0%, #25D366 100%);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+            transform: translateY(-2px);
+        }
+        
+        .btn-details {
+            background: var(--bronze);
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: var(--transition);
+            flex: 1;
+            justify-content: center;
+            border: none;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(128, 90, 40, 0.3);
+        }
+        
+        .btn-details:hover {
+            box-shadow: 0 6px 20px rgba(128, 90, 40, 0.5);
+            transform: translateY(-2px);
+        }
+        
+        /* ============================================= */
+        /* SECCIÓN "SOBRE EL DOCTOR" */
+        /* ============================================= */
+
+        .about-us-section {
+            padding: 5rem 0;
+            background: var(--white);
+            color: var(--black);
+            overflow: hidden;
+        }
+
+        .about-us-content {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+        }
+
+        .about-image-wrapper {
+            flex: 1 1 45%;
+            position: relative;
+            min-height: 500px;
+        }
+
+        .about-main-image {
+            width: 100%;
+            height: 500px;
+            border-radius: 20rem;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+            border: 2px solid rgba(249, 228, 150, 0.3);
+        }
+
+        .about-main-image img {
+            width: 100%;
+            height: 99.9%;
+            object-fit: cover;
+
+        }
+
+        .about-chef-image {
+            position: absolute;
+            bottom: 2rem;
+            left: -2rem;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 5px solid var(--white);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+        }
+
+        .about-chef-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .about-experience-box {
+            position: absolute;
+            top: 3rem;
+            right: -1rem;
+            background: var(--gold);
+            color: var(--black);
+            padding: 1rem;
+            border-radius: 10px;
+            width: 130px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(198, 166, 72, 0.4);
+            border: 2px solid rgba(249, 228, 150, 0.5);
+            font-weight: 700;
+        }
+
+        .about-experience-box strong {
+            display: block;
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        .about-experience-box span {
+            font-size: 0.9rem;
+        }
+
+        .about-text-wrapper {
+            flex: 1 1 55%;
+            color: var(--dark-gray);
+        }
+
+        .about-subtitle {
+            display: block;
+            font-size: 0.9rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            background: var(--gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+
+        .about-text-wrapper h2 {
+            background: var(--gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 2.5rem;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-text-wrapper p {
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 2rem;
+            max-width: 550px;
+            color: rgba(26, 26, 26, 0.8);
+        }
+
+        .about-checklist {
+            list-style: none;
+            margin-bottom: 2.5rem;
+            padding-left: 0;
+        }
+
+        .about-checklist li {
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .about-checklist .fa-check {
+            background: var(--gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-right: 0.8rem;
+            font-size: 0.9rem;
+        }
+
+        .about-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn-about-primary, .btn-about-secondary {
+            padding: 0.8rem 2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: var(--transition);
+            display: inline-block;
+            text-align: center;
+        }
+
+        .btn-about-primary {
+            background: var(--gold);
+            color: var(--black) !important;
+            border: none;
+            box-shadow: 0 5px 15px rgba(198, 166, 72, 0.4);
+        }
+
+        .btn-about-primary:hover {
+            box-shadow: 0 8px 25px rgba(198, 166, 72, 0.6);
+            transform: translateY(-3px);
+        }
+
+        .btn-about-secondary {
+            background: transparent;
+            border: 2px solid;
+            border-image: var(--gold) 1;
+            color: var(--black);
+        }
+
+        .btn-about-secondary:hover {
+            background: var(--gold);
+            border-image: none;
+            transform: translateY(-3px);
+        }
+
+        .features-divider {
+            border: none;
+            height: 1px;
+            background-color: rgba(0, 0, 0, 0.1);
+            margin: 4rem 0;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            color: var(--dark-gray);
+        }
+
+        .feature-item {
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .feature-item i {
+            font-size: 2.8rem;
+            background: var(--gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-item h3 {
+            background: var(--gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .feature-item p {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: rgba(26, 26, 26, 0.8);
+        }
+
+        /* Testimonial Preview */
+        .testimonial-preview {
+            padding: 5rem 0;
+            background: var(--white);
+        }
+        
+        .testimonials-slider {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .testimonial {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 10px;
+            box-shadow: var(--card-shadow);
+            text-align: center;
+            margin: 0 1rem;
+            border: 1px solid rgba(249, 228, 150, 0.1);
+            border-top: 4px solid;
+            border-image: var(--gold) 1;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+        
+        .testimonial-text:before,
+        .testimonial-text:after {
+            content: '"';
+            font-size: 3rem;
+            color: #C6A648;
+            position: absolute;
+            opacity: 0.3;
+        }
+        
+        .testimonial-text:before {
+            top: -1rem;
+            left: -1rem;
+        }
+        
+        .testimonial-text:after {
+            bottom: -2rem;
+            right: -1rem;
+        }
+        
+        .testimonial-author {
+            font-weight: 700;
+            background: var(--gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Sección Ubicación y Video */
+        .location-video-section {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, rgba(128, 90, 40, 0.05) 0%, rgba(198, 166, 72, 0.05) 100%);
+        }
+
+        .location-video-section .section-title {
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        .location-video-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .location-video {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+        }
+        
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, #654321 0%, #805A28 50%, #654321 100%);
+            color: var(--white);
+            padding: 4rem 0 2rem;
+            border-top: 4px solid;
+            border-image: var(--gold) 1;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-section h3 {
+            background: var(--gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links ul li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .footer-links ul li a {
+            color: #eee;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-links ul li a:hover {
+            color: #F9E496;
+        }
+        
+        .contact-info p {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 50%;
+            color: var(--white);
+            transition: var(--transition);
+            text-decoration: none;
+            border: 1px solid rgba(249, 228, 150, 0.2);
+        }
+        
+        .social-links a:hover {
+            background: var(--gold);
+            color: var(--black);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #ccc;
+            font-size: 0.9rem;
+        }
+        
+        /* WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+            z-index: 100;
+            transition: var(--transition);
+            animation: pulse 2s infinite;
+            text-decoration: none;
+            border: 2px solid white;
+        }
+        
+        .whatsapp-float:hover {
+            box-shadow: 0 12px 35px rgba(37, 211, 102, 0.6);
+            transform: scale(1.1);
+        }
+        
+        .whatsapp-tooltip {
+            position: absolute;
+            right: 70px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: var(--black);
+            color: var(--white);
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: var(--transition);
+        }
+        
+        .whatsapp-float:hover .whatsapp-tooltip {
+            opacity: 1;
+            right: 75px;
+        }
+        
+        .gif-logo-float {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            width: 140px;
+            height: 60px;
+            justify-content: center;
+            z-index: 2000;
+            transition: var(--transition);
+        }
+
+        .gif-logo-float img {
+            width: 35%;
+            height: 99%;
+            object-fit: cover;
+        }
+
+        .gif-logo-float:hover {
+            transform: scale(1.1);
+        }
+
+        /* Page Navigation */
+        .page {
+            display: none;
+            padding-top: 80px;
+        }
+        
+        .page.active {
+            display: block;
+        }
+        
+        /* Page Banners */
+        .page-banner {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') no-repeat center center;
+            background-size: cover;
+            padding: 8rem 0 4rem;
+            text-align: center;
+            color: var(--white);
+            border-bottom: 4px solid;
+            border-image: var(--gold) 1;
+        }
+        
+        .page-banner h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+        }
+        
+        .page-banner p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+        }
+        
+        /* About Page */
+        .history-parallax {
+            height: 60vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+        }
+        
+        .history-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') no-repeat center center;
+            background-size: cover;
+            background-attachment: fixed;
+            z-index: -1;
+        }
+        
+        .craftsmanship {
+            padding: 5rem 0;
+            background-color: var(--white);
+        }
+        
+        .craftsmanship-content {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+        }
+        
+        .craftsmanship-text {
+            flex: 1;
+        }
+        
+        .craftsmanship-image {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .craftsmanship-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .team {
+            padding: 5rem 0;
+            background-color: var(--warm-beige);
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .team-member {
+            text-align: center;
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: var(--card-shadow);
+            transition: var(--transition);
+            border: 1px solid rgba(249, 228, 150, 0.1);
+        }
+        
+        .team-member:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--card-shadow-hover);
+            border-top: 3px solid;
+            border-image: var(--gold) 1;
+        }
+        
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1.5rem;
+            border: 3px solid #C6A648;
+        }
+        
+        /* Collection Page */
+        .collection-filters {
+            padding: 1rem 0;
+            background-color: var(--white);
+            border-bottom: 1px solid #eee;
+        }
+        
+        .filters {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .filter-btn {
+            padding: 0.6rem 1.5rem;
+            background-color: var(--white);
+            border: 1px solid #ddd;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .filter-btn.active, .filter-btn:hover {
+            background: var(--gold);
+            color: var(--black);
+            border: none;
+            font-weight: 600;
+        }
+        
+        .product-grid {
+            padding: 3rem 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        /* Estilos para Casos Clínicos - Antes y Después */
+        .casos-clinicos-section {
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .casos-clinicos-section .section-title {
+            margin-bottom: 2rem;
+        }
+
+        .before-after-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem 0;
+        }
+
+        .before-after-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            height: 500px;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+        }
+
+        .before-after-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .before-after-image.after-image {
+            clip-path: inset(0 50% 0 0);
+            cursor: ew-resize;
+        }
+
+        .before-after-handle {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 4px;
+            height: 100%;
+            background: var(--gold);
+            cursor: ew-resize;
+            transform: translateX(-50%);
+            z-index: 10;
+        }
+
+        .before-after-handle::before,
+        .before-after-handle::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+            background: var(--gold);
+            border-radius: 50%;
+            border: 3px solid white;
+        }
+
+        .before-after-handle::before {
+            left: -20px;
+            box-shadow: -8px 0 8px rgba(0,0,0,0.1);
+        }
+
+        .before-after-handle::after {
+            right: -20px;
+            box-shadow: 8px 0 8px rgba(0,0,0,0.1);
+        }
+
+        /* Responsive para Casos Clínicos */
+        @media (max-width: 768px) {
+            .before-after-wrapper {
+                height: 350px;
+            }
+        }
+        
+        /* Vista de lista para el menú */
+        .product-list-view {
+            display: block;
+        }
+        
+        .product-list-view .product-card {
+            display: flex;
+            min-width: 100%;
+            margin-bottom: 2rem;
+        }
+        
+        .product-list-view .product-img {
+            width: 300px;
+            height: 200px;
+            flex-shrink: 0;
+        }
+        
+        .product-list-view .product-info {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        /* Interactive Quiz */
+        .quiz-section {
+            padding: 5rem 0;
+            background-color: var(--warm-beige);
+        }
+        
+        .quiz-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: var(--white);
+            border-radius: 10px;
+            box-shadow: var(--shadow-hover);
+            overflow: hidden;
+        }
+        
+        .quiz-header {
+            padding: 2rem;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: var(--white);
+            text-align: center;
+        }
+        
+        .quiz-progress {
+            height: 5px;
+            background-color: rgba(255,255,255,0.3);
+            margin-top: 1rem;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        
+        .quiz-progress-bar {
+            height: 100%;
+            background-color: var(--white);
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+        
+        .quiz-body {
+            padding: 2rem;
+        }
+        
+        .question {
+            display: none;
+        }
+        
+        .question.active {
+            display: block;
+        }
+        
+        .question h3 {
+            margin-bottom: 1.5rem;
+        }
+        
+        .options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+        
+        .option {
+            padding: 1rem;
+            background-color: var(--warm-beige);
+            border-radius: 5px;
+            cursor: pointer;
+            transition: var(--transition);
+            text-align: center;
+        }
+        
+        .option:hover, .option.selected {
+            background-color: var(--secondary);
+            color: var(--white);
+        }
+        
+        .quiz-footer {
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            border-top: 1px solid #eee;
+        }
+        
+        .quiz-results {
+            display: none;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .result-products {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        /* Blog Page */
+        .blog-section {
+            padding: 5rem 0;
+            background-color: var(--warm-beige);
+        }
+        
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        
+        .article-card {
+            background-color: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            transition: var(--transition);
+            border: 1px solid rgba(249, 228, 150, 0.1);
+        }
+        
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--card-shadow-hover);
+            border-top: 3px solid;
+            border-image: var(--gold) 1;
+        }
+        
+        .article-image {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .article-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .article-card:hover .article-image img {
+            transform: scale(1.05);
+        }
+        
+        .article-content {
+            padding: 1.5rem;
+        }
+        
+        .article-content h3 {
+            margin-bottom: 0.8rem;
+        }
+        
+        .article-summary {
+            color: #444;
+            margin-bottom: 1.5rem;
+        }
+        
+        .read-more {
+            color: #C6A648;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: var(--transition);
+        }
+        
+        .read-more:hover {
+            color: #805A28;
+        }
+        
+        /* Paginación del blog */
+        .blog-pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 3rem;
+            gap: 0.5rem;
+        }
+        
+        .page-btn {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+            background-color: var(--white);
+            color: var(--dark-gray);
+            text-decoration: none;
+            transition: var(--transition);
+            border: 1px solid #ddd;
+        }
+        
+        .page-btn.active, .page-btn:hover {
+            background: var(--gold);
+            color: var(--black);
+            border-color: #C6A648;
+        }
+        
+        /* Contact Page */
+        .contact-section {
+            padding: 5rem 0;
+            background-color: var(--warm-beige);
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+        }
+        
+        .contact-form {
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: var(--card-shadow);
+            border: 1px solid rgba(249, 228, 150, 0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: 'Lato', sans-serif;
+            transition: var(--transition);
+        }
+        
+        .form-control:focus {
+            border-color: #C6A648;
+            outline: none;
+        }
+        
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .map-container {
+            height: 300px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+        }
+        
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .whatsapp-cta {
+            text-align: center;
+            padding: 3rem 0;
+            background-color: var(--white);
+            margin-top: 3rem;
+            border-radius: 10px;
+            box-shadow: var(--card-shadow);
+            border: 1px solid rgba(249, 228, 150, 0.1);
+        }
+        
+        /* Policies Page */
+        .policies-section {
+            padding: 5rem 0;
+            background-color: var(--warm-beige);
+        }
+        
+        .policy {
+            margin-bottom: 3rem;
+        }
+        
+        .policy h2 {
+            margin-bottom: 1.5rem;
+            background: var(--gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .policy-content {
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: var(--card-shadow);
+            border: 1px solid rgba(249, 228, 150, 0.1);
+        }
+        
+        .policy-content p {
+            margin-bottom: 1rem;
+            color: #444;
+        }
+        
+        /* Product Modal */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            padding: 2rem;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+        }
+        
+        .modal-overlay.active { 
+            opacity: 1 !important; 
+            visibility: visible !important; 
+        }
+        
+        .product-modal {
+            background: var(--white);
+            border-radius: 10px;
+            max-width: 1200px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            transform: translateY(20px);
+            transition: var(--transition);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.25);
+            border: 1px solid rgba(249, 228, 150, 0.2);
+        }
+        
+        .modal-overlay.active .product-modal {
+            transform: translateY(0);
+        }
+        
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 2rem;
+            border-bottom: 1px solid #eee;
+            background: var(--gold);
+            color: var(--black);
+            font-weight: 700;
+        }
+        
+        .modal-close {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--black);
+            transition: var(--transition);
+        }
+        
+        .modal-close:hover {
+            color: var(--black);
+            transform: rotate(90deg);
+        }
+        
+        .modal-body { 
+            display: flex; 
+            flex-wrap: wrap; 
+            padding: 2rem;
+        }
+        
+        .modal-gallery {
+            flex: 1;
+            min-width: 300px;
+            padding: 2rem;
+        }
+        
+        .main-image {
+            width: 100%;
+            height: 400px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 1rem;
+        }
+        
+        .main-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .thumbnail-gallery {
+            display: flex;
+            gap: 0.5rem;
+            overflow-x: auto;
+        }
+        
+        .thumbnail {
+            width: 80px;
+            height: 80px;
+            border-radius: 5px;
+            overflow: hidden;
+            cursor: pointer;
+            opacity: 0.7;
+            transition: var(--transition);
+            flex-shrink: 0;
+        }
+        
+        .thumbnail.active, .thumbnail:hover {
+            opacity: 1;
+            border: 2px solid #C6A648;
+        }
+        
+        .thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .modal-content {
+            flex: 1;
+            min-width: 300px;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .modal-title {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+        
+        .modal-price {
+            font-size: 1.5rem;
+            background: var(--gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+        
+        .modal-description {
+            margin-bottom: 1.5rem;
+            color: #444;
+        }
+        
+        .product-specs {
+            margin-bottom: 2rem;
+        }
+        
+        .specs-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .specs-table tr {
+            border-bottom: 1px solid #eee;
+        }
+        
+        .specs-table td {
+            padding: 0.8rem 0;
+        }
+        
+        .specs-table td:first-child {
+            font-weight: 600;
+            width: 40%;
+         }
+        
+        .modal-features {
+            margin-bottom: 2rem;
+        }
+        
+        .modal-features h4 {
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            color: #999;
+        }
+        
+        .modal-features ul {
+            list-style: none;
+        }
+        
+        .modal-features li {
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .modal-features li:before {
+            content: '•';
+            color: #C6A648;
+            margin-right: 0.5rem;
+            font-size: 1.2rem;
+        }
+        
+        /* Quantity Selector */
+        .quantity-selector {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .quantity-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: none;
+            background-color: var(--warm-beige);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        
+        .quantity-btn:hover {
+            background-color: #C6A648;
+            color: white;
+        }
+        
+        .quantity-display {
+            font-size: 1.2rem;
+            font-weight: bold;
+            min-width: 40px;
+            text-align: center;
+        }
+        
+        .modal-actions {
+            display: flex;
+            gap: 1rem;
+            margin-top: auto;
+        }
+        
+        .modal-actions .btn {
+            flex: 1;
+            text-align: center;
+        }
+        
+        /* Cart Modal */
+        .cart-modal {
+            background: var(--white);
+            border-radius: 10px;
+            max-width: 500px;
+            width: 100%;
+            max-height: 80vh;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            transform: translateY(20px);
+            transition: var(--transition);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.25);
+            border: 1px solid rgba(249, 228, 150, 0.2);
+        }
+        
+        .modal-overlay.active .cart-modal {
+            transform: translateY(0);
+        }
         
         .cart-items {
             padding: 1.5rem;
